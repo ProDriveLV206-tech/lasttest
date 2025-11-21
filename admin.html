@@ -1,0 +1,53 @@
+
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Admin Panel</title>
+<style>
+body{background:#0d1117;color:#eee;font-family:Arial;padding:20px;}
+button{display:block;margin:10px 0;padding:10px 15px;border:0;border-radius:6px;background:#238636;color:white;font-size:16px;cursor:pointer;}
+button:hover{background:#2ea043;}
+</style>
+</head><body>
+<h1>Admin Panel</h1>
+<h3>Admin Commands</h3>
+<button>Ban User</button>
+<button>Unban User</button>
+<button>Kick User</button>
+<button>Mute User</button>
+<button>Unmute User</button>
+<button>Temp Mute</button>
+<button>Shadowban User</button>
+<button>Force Logout User</button>
+<button>Change Nickname</button>
+<button>Reset Profile Picture</button>
+
+<h3>Chat Controls</h3>
+<button>Clear All Chat</button>
+<button>Clear User Messages</button>
+<button>Delete Message</button>
+<button>Lock Chat</button>
+<button>Unlock Chat</button>
+<button>Slow Mode</button>
+<button>Global Announcement</button>
+
+<h3>Tools</h3>
+<button>View Users</button>
+<button>View Banned Users</button>
+<button>View Muted Users</button>
+<button>View Online Users</button>
+<button>View Flagged Messages</button>
+
+<h3>UI Controls</h3>
+<button>Change Accent Color</button>
+<button>Change Background Theme</button>
+<button>Change Server Name</button>
+<button>Change Server Logo</button>
+<button>Toggle Maintenance Mode</button>
+
+
+<script type="module" src="admin.js"></script>
+<script>
+const buttons=document.querySelectorAll('button');
+buttons.forEach(btn=>{
+  btn.onclick=()=>runAdmin(btn.textContent.trim());
+});
+</script>
+</body></html>
